@@ -3,33 +3,36 @@ header{
 	height:100px;
 	background-color:hsla(225,50%,70%,1);
 }
-footer{
-	text-align:center;
-	height:100px;
-	background-color:hsla(225,50%,70%,1);
-}
 .foto{
 	width:150px;
 	height:100px;
 }
 .container{
 	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
+	flex-direction:row;  /* главная ось расположена по горизонтали*/
+	flex-wrap:wrap; /*перенос flex-элементов */
 }
 .container div{
 	background-color:hsla(225,50%,90%,1);
 	margin:5px;
 	text-align:justify;
-	flex:1 1 200px;
+	flex:1 1 200px;  /* пропорции и базовый размер flex-элементов*/
 	display:flex;
-	flex-flow:column wrap;
-	align-items:center;
-	justify-content:flex-end;
+	flex-flow:column wrap;  /* главная ось расположена по вертикали, + есть перенос flex-элементов*/
+	align-items:center;  /* выравнивание flex-элементов вдоль поперечной оси*/
+	justify-content:flex-end; /* выравнивание flex-элементов вдоль главной оси*/
 }
 .container div:nth-of-type(4){
 	flex:2 1 200px;
 }
+.container div img {
+	align-self: flex-end;
+}
 footer h3{
 	
+}
+footer{
+	text-align:center;
+	height:100px;
+	background-color:hsla(225,50%,70%,1);
 }
