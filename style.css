@@ -1,0 +1,35 @@
+header{
+	text-align:center;
+	height:100px;
+	background-color:hsla(225,50%,70%,1);
+}
+footer{
+	text-align:center;
+	height:100px;
+	background-color:hsla(225,50%,70%,1);
+}
+.foto{
+	width:150px;
+	height:100px;
+}
+.container{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+.container div{
+	background-color:hsla(225,50%,90%,1);
+	margin:5px;
+	text-align:justify;
+	flex:1 1 200px;
+	display:flex;
+	flex-flow:column wrap;
+	align-items:center;
+	justify-content:flex-end;
+}
+.container div:nth-of-type(4){
+	flex:2 1 200px;
+}
+footer h3{
+	
+}
