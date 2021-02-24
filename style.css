@@ -8,9 +8,9 @@ header{
 	height:100px;
 }
 .container{
-	display:flex;
+	display:flex; /*обьявление дочерних элементов флэксами*/
 	flex-direction:row;  /* главная ось расположена по горизонтали*/
-	flex-wrap:wrap; /*перенос flex-элементов */
+	flex-wrap:wrap-reverse; /* обратный перенос flex-элементов */
 }
 .container div{
 	background-color:hsla(225,50%,90%,1);
@@ -23,13 +23,18 @@ header{
 	justify-content:flex-end; /* выравнивание flex-элементов вдоль главной оси*/
 }
 .container div:nth-of-type(4){
-	flex:2 1 200px;
+	order:-1; /*меняем порядок*/
+	flex:2 1 250px; /* пропорции и базовый размер 4-го flex-элемента*/
+	flex-direction:column-reverse; /*обратный порядок вдоль главной оси */
 }
-.container div img {
-	align-self: flex-end;
+button{
+	align-self: flex-end; /* выравнивание flex-элемента*/
+}
+.container div:nth-of-type(4) button{
+	align-self: flex-start;  /* выравнивание flex-элемента*/
 }
 footer h3{
-	
+	margin-top:0;
 }
 footer{
 	text-align:center;
