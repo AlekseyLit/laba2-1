@@ -1,5 +1,7 @@
 header{
-	text-align:center;
+	display:flex;
+	align-items:center;  /* выравнивание flex-элементов вдоль поперечной оси*/
+	justify-content:center;   /* выравнивание flex-элементов вдоль главной оси*/
 	height:100px;
 	background-color:hsla(225,50%,70%,1);
 }
@@ -8,9 +10,11 @@ header{
 	height:100px;
 }
 .container{
+	height:500px;
 	display:flex; /*обьявление дочерних элементов флэксами*/
 	flex-direction:row;  /* главная ось расположена по горизонтали*/
 	flex-wrap:wrap-reverse; /* обратный перенос flex-элементов */
+	align-content:stretch;  /* выравнивание flex-элементов вдоль поперечной оси*/
 }
 .container div{
 	background-color:hsla(225,50%,90%,1);
@@ -27,17 +31,18 @@ header{
 	flex:2 1 250px; /* пропорции и базовый размер 4-го flex-элемента*/
 	flex-direction:column-reverse; /*обратный порядок вдоль главной оси */
 }
+
 button{
 	align-self: flex-end; /* выравнивание flex-элемента*/
 }
 .container div:nth-of-type(4) button{
 	align-self: flex-start;  /* выравнивание flex-элемента*/
 }
-footer h3{
-	margin-top:0;
-}
+
 footer{
-	text-align:center;
+	display:flex;
 	height:100px;
 	background-color:hsla(225,50%,70%,1);
+	align-items:center;
+	justify-content:center;
 }
